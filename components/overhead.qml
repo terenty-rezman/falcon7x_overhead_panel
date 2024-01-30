@@ -7,6 +7,8 @@ Image {
 
     TwoStateButton {
         id: firebutton_1
+        objectName: "firebutton_1"
+
         x: 75
         y: 75
 
@@ -15,6 +17,8 @@ Image {
 
     TwoStateButton {
         id: firebutton_2
+        objectName: "firebutton_2"
+
         x: 390
         y: 75
 
@@ -23,6 +27,8 @@ Image {
 
     TwoStateButton {
         id: firebutton_3
+        objectName: "firebutton_3"
+
         x: 745
         y: 75
 
@@ -31,6 +37,8 @@ Image {
 
     TwoStateButton {
         id: fireapu
+        objectName: "fireapu"
+
         x: 280
         y: 75
 
@@ -39,6 +47,8 @@ Image {
 
     TwoStateButton {
         id: firerearcomp
+        objectName: "firerearcomp"
+
         x: 601
         y: 75
 
@@ -47,6 +57,8 @@ Image {
 
     TwoStateButton {
         id: firebagcomp
+        objectName: "firebagcomp"
+
         x: 663
         y: 75
 
@@ -55,6 +67,8 @@ Image {
 
     ThreeStateButton {
         id: disch_11
+        objectName: "disch_11"
+
         x: 138
         y: 75
 
@@ -63,6 +77,8 @@ Image {
 
     ThreeStateButton {
         id: disch_12
+        objectName: "disch_12"
+
         x: 201
         y: 75
 
@@ -71,6 +87,8 @@ Image {
 
     ThreeStateButton {
         id: disch_21
+        objectName: "disch_21"
+
         x: 455
         y: 75
 
@@ -79,6 +97,8 @@ Image {
 
     ThreeStateButton {
         id: disch_22
+        objectName: "disch_22"
+
         x: 518
         y: 75
 
@@ -87,6 +107,8 @@ Image {
 
     ThreeStateButton {
         id: disch_31
+        objectName: "disch_31"
+
         x: 810
         y: 75
 
@@ -95,6 +117,8 @@ Image {
 
     ThreeStateButton {
         id: disch_32
+        objectName: "disch_32"
+
         x: 874
         y: 75
 

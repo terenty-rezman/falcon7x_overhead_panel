@@ -28,9 +28,8 @@ Rectangle {
 
     MouseArea {
         anchors.fill: parent
-        onClicked: {
-           button.state = !button.state
-           console.log(button.state)
+        onPressed: {
+            backend.on_button_press(button)
         }
     }
 
