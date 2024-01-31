@@ -37,8 +37,12 @@ Rectangle {
 
     MouseArea {
         anchors.fill: parent
-        onClicked: {
+        onPressed: {
             backend.on_button_press(button)
+        }
+
+        onReleased: {
+            backend.on_button_release(button)
         }
     }
 
