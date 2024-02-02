@@ -1,16 +1,26 @@
-import QtQuick 2.0
+import QtQuick 2.15
 
 Image {
     width: 1000
     height: 1000
     source: "overhead.png"
 
-    TwoStateButton {
+    TwoStateDisplayButton {
         id: firebutton_1
         objectName: "firebutton_1"
 
         x: 75
-        y: 75
+        y: 41
+
+        filename: "button_png/fire1_display.png"
+    }
+
+    TwoStateIndicator {
+        id: fireindicator_1
+        objectName: "fireindicator_1"
+
+        x: 75
+        y: 75 
 
         filename: "button_png/fire1.png"
     }

@@ -2,17 +2,19 @@ import sys
 import array
 from collections import OrderedDict
 
-from PySide2.QtQuick import QQuickView
-from PySide2.QtGui import QGuiApplication
-from PySide2.QtCore import QUrl, QObject, Slot, Property, SLOT, SIGNAL, QByteArray
-from PySide2.QtNetwork import QUdpSocket, QHostAddress
-from PySide2.QtQml import QQmlContext
+from PySide6.QtQuick import QQuickView, QQuickItem
+from PySide6.QtGui import QGuiApplication
+from PySide6.QtCore import QUrl, QObject, Slot, Property, SLOT, SIGNAL, QByteArray
+from PySide6.QtNetwork import QUdpSocket, QHostAddress
+from PySide6.QtQml import QQmlContext
 
-FALCON7X_CORE_ADDRESS = QHostAddress.LocalHost
-FALCON7X_CORE_PORT = 1998
+FALCON7X_SEND_STATE_ADDRRESS = QHostAddress.LocalHost
+FALCON7X_SEND_STATE_PORT = 1998
+
+FALCON7X_RECEIVE_STATE_PORT = 1999
 
 
-buttons_udp_idx = OrderedDict(
+send_buttons_idx = OrderedDict(
     firebutton_1=0,
     firebutton_2=1,
     firebutton_3=2,
@@ -27,46 +29,75 @@ buttons_udp_idx = OrderedDict(
     disch_32=11
 )
 
-buttons_udp_state = QByteArray() 
-buttons_udp_state.resize(len(buttons_udp_idx))
+send_buttons_state = QByteArray() 
+send_buttons_state.resize(len(send_buttons_idx))
+
+receinve_panel_items = OrderedDict(
+    firebutton_1=0,
+    fireindicator_1=1,
+    disch_11=2,
+    disch_12=2
+)
 
 
 class Backend(QObject):
-    # @Property(int)
-    # def a(self):
-    #     return 1
+    @Property(int)
+    def a(self):
+        return 1
 
-    def init_socket(self):
-        self.udp_socket = QUdpSocket(self)
-
+    def init_sockets(self):
+        self.send_socket = QUdpSocket(self)
         self.connect(
-            self.udp_socket, SIGNAL('readyRead()'),
-            self, SLOT('readPendingDatagrams()')
+            self.send_socket, SIGNAL('readyRead()'),
+            self, SLOT('ignore_incoming_data()')
         )
 
-    def readPendingDatagrams(self):
-        while self.udpSocket.hasPendingDatagrams():
-            datagram = QByteArray()
-            datagram.resize(self.udpSocket.pendingDatagramSize())
+        self.receive_socket = QUdpSocket(self)
+        self.receive_socket.bind(QHostAddress("0.0.0.0"), FALCON7X_RECEIVE_STATE_PORT)
+        self.connect(
+            self.receive_socket, SIGNAL('readyRead()'),
+            self, SLOT('read_incoming_state()')
+        )
 
-            (sender, senderPort) = self.udp_socket.readDatagram(datagram.data(), datagram.size())
+    def ignore_incoming_data(self):
+        # ignore incoming data
+        # state data comes on different socket
+        while self.send_socket.hasPendingDatagrams():
+            datagram = QByteArray()
+            datagram.resize(self.send_socket.pendingDatagramSize())
+
+            (data, sender, senderPort) = self.send_socket.readDatagram(len(datagram))
+
+    def read_incoming_state(self):
+        datagram = QByteArray()
+        while self.receive_socket.hasPendingDatagrams():
+            datagram.resize(self.receive_socket.pendingDatagramSize())
+            (data, sender, senderPort) = self.receive_socket.readDatagram(len(datagram))
+
+        for i, item_id in enumerate(receinve_panel_items.keys()):
+            state = int.from_bytes(data[i], "little")
+            item = view.rootObject().findChild(QQuickItem, item_id)
+            if item:
+                if item_id.startswith("disch"):
+                    if state == 1: state = 3 
+                item.setProperty("state", state)
 
 
     def __init__(self):
         super().__init__()
-        self.init_socket()
+        self.init_sockets()
 
     @Slot(QObject, result=None)
     def on_button_press(self, button):
-        idx = buttons_udp_idx[button.objectName()]
-        buttons_udp_state[idx] = b'\x01'
-        self.udp_socket.writeDatagram(buttons_udp_state, FALCON7X_CORE_ADDRESS, FALCON7X_CORE_PORT)
+        idx = send_buttons_idx[button.objectName()]
+        send_buttons_state[idx] = b'\x01'
+        self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
 
     @Slot(QObject, result=None)
     def on_button_release(self, button):
-        idx = buttons_udp_idx[button.objectName()]
-        buttons_udp_state[idx] = b'\x00'
-        self.udp_socket.writeDatagram(buttons_udp_state, FALCON7X_CORE_ADDRESS, FALCON7X_CORE_PORT)
+        idx = send_buttons_idx[button.objectName()]
+        send_buttons_state[idx] = b'\x00'
+        self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
 
 
 app = QGuiApplication(sys.argv)
@@ -80,4 +111,4 @@ view.rootContext().setContextProperty("backend", backend)
 
 view.show()
 
-app.exec_()
+app.exec()
