@@ -45,14 +45,24 @@ Image {
         filename: "button_png/fire3.png"
     }
 
-    TwoStateButton {
-        id: fireapu
-        objectName: "fireapu"
+    TwoStateIndicator {
+        id: fire_apu_indicator 
+        objectName: "fire_apu_indicator"
 
         x: 280
         y: 75
 
         filename: "button_png/fire_apu.png"
+    }
+
+    TwoStateDisplayButton {
+        id: apu_disch
+        objectName: "apu_disch"
+
+        x: 280 
+        y: 75 
+
+        filename: "button_png/apu_dish.png"
     }
 
     TwoStateButton {

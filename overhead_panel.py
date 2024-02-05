@@ -18,7 +18,7 @@ send_buttons_idx = OrderedDict(
     firebutton_1=0,
     firebutton_2=1,
     firebutton_3=2,
-    fireapu=3,
+    apu_disch=3,
     firerearcomp=4,
     firebagcomp=5,
     disch_11=6,
@@ -36,7 +36,9 @@ receinve_panel_items = OrderedDict(
     firebutton_1=0,
     fireindicator_1=1,
     disch_11=2,
-    disch_12=2
+    disch_12=3,
+    apu_disch=4,
+    fire_apu_indicator=5
 )
 
 
