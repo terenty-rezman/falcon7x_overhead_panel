@@ -5,7 +5,7 @@ Image {
     height: 1000
     source: "overhead.png"
 
-    TwoStateDisplayButton {
+    TwoStateDisplayUpButton {
         id: firebutton_1
         objectName: "firebutton_1"
 
@@ -55,7 +55,7 @@ Image {
         filename: "button_png/fire_apu.png"
     }
 
-    TwoStateDisplayButton {
+    TwoStateDisplayDownButton {
         id: apu_disch
         objectName: "apu_disch"
 

@@ -30,7 +30,7 @@ send_buttons_idx = OrderedDict(
 )
 
 send_buttons_state = QByteArray() 
-send_buttons_state.resize(len(send_buttons_idx))
+send_buttons_state.resize(len(send_buttons_idx), '\0')
 
 receinve_panel_items = OrderedDict(
     firebutton_1=0,
