@@ -7,6 +7,7 @@ Rectangle {
     property int state: 0
 
     property string filename
+    property alias mouse_enabled: mouse_area.enabled
 
     Image {
         id: off
@@ -27,6 +28,7 @@ Rectangle {
     }
 
     MouseArea {
+        id: mouse_area
         anchors.fill: parent
         onPressed: {
             backend.on_button_press(button)

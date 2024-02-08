@@ -5,6 +5,7 @@ Image {
     height: 1000
     source: "overhead.png"
 
+    // engine 1 
     TwoStateDisplayUpButton {
         id: firebutton_1
         objectName: "firebutton_1"
@@ -15,7 +16,8 @@ Image {
         filename: "button_png/fire1_display.png"
     }
 
-    TwoStateIndicator {
+    // indicator
+    TwoStateButton {
         id: fireindicator_1
         objectName: "fireindicator_1"
 
@@ -23,29 +25,57 @@ Image {
         y: 75 
 
         filename: "button_png/fire1.png"
+        mouse_enabled: false
     }
 
-    TwoStateButton {
+    // engine 2
+    TwoStateDisplayUpButton {
         id: firebutton_2
         objectName: "firebutton_2"
 
-        x: 390
-        y: 75
+        x: 392
+        y: 42 
 
-        filename: "button_png/fire2.png"
+        filename: "button_png/fire1_display.png"
     }
 
+    // indicator
     TwoStateButton {
+        id: fireindicator_2
+        objectName: "fireindicator_2"
+
+        x: 390
+        y: 75 
+
+        filename: "button_png/fire2.png"
+        mouse_enabled: false
+    }
+
+    // engine 3
+    TwoStateDisplayUpButton {
         id: firebutton_3
         objectName: "firebutton_3"
 
         x: 745
-        y: 75
+        y: 42 
 
-        filename: "button_png/fire3.png"
+        filename: "button_png/fire1_display.png"
     }
 
-    TwoStateIndicator {
+    // indicator
+    TwoStateButton {
+        id: fireindicator_3
+        objectName: "fireindicator_3"
+
+        x: 745
+        y: 75 
+
+        filename: "button_png/fire3.png"
+        mouse_enabled: false
+    }
+
+    // indicator
+    TwoStateButton {
         id: fire_apu_indicator 
         objectName: "fire_apu_indicator"
 
@@ -53,6 +83,7 @@ Image {
         y: 75
 
         filename: "button_png/fire_apu.png"
+        mouse_enabled: false
     }
 
     TwoStateDisplayDownButton {
@@ -63,6 +94,18 @@ Image {
         y: 75 
 
         filename: "button_png/apu_dish.png"
+    }
+
+    // indicator
+    TwoStateDisplayUpButton {
+        id: fire_apu_closed_indicator
+        objectName: "fire_apu_closed_indicator"
+
+        x: 280
+        y: 41
+
+        filename: "button_png/fire1_display.png"
+        mouse_enabled: false
     }
 
     TwoStateButton {

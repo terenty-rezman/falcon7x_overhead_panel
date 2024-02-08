@@ -8,6 +8,7 @@ Rectangle {
     color:"transparent"
 
     property string filename
+    property alias mouse_enabled: mouse_area.enabled
 
     Image {
         id: off
@@ -28,6 +29,7 @@ Rectangle {
     }
 
     MouseArea {
+        id: mouse_area
         width: 46
         height: 46
         x: 0

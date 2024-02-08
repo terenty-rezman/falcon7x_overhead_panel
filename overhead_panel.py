@@ -32,13 +32,22 @@ send_buttons_idx = OrderedDict(
 send_buttons_state = QByteArray() 
 send_buttons_state.resize(len(send_buttons_idx), '\0')
 
-receinve_panel_items = OrderedDict(
+receive_panel_items = OrderedDict(
     firebutton_1=0,
     fireindicator_1=1,
     disch_11=2,
     disch_12=3,
     apu_disch=4,
-    fire_apu_indicator=5
+    fire_apu_indicator=5,
+    fire_apu_closed_indicator=6,
+    firebutton_2=7,
+    fireindicator_2=8,
+    disch_21=9,
+    disch_22=10,
+    firebutton_3=11,
+    fireindicator_3=12,
+    disch_31=13,
+    disch_32=14
 )
 
 
@@ -76,7 +85,7 @@ class Backend(QObject):
             datagram.resize(self.receive_socket.pendingDatagramSize())
             (data, sender, senderPort) = self.receive_socket.readDatagram(len(datagram))
 
-        for i, item_id in enumerate(receinve_panel_items.keys()):
+        for i, item_id in enumerate(receive_panel_items.keys()):
             state = int.from_bytes(data[i], "little")
             item = view.rootObject().findChild(QQuickItem, item_id)
             if item:
