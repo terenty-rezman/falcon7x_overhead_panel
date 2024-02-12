@@ -15,8 +15,8 @@ Rectangle {
         source: button.filename
 
         sourceSize.width: 92
-        sourceSize.height: 72 
-        sourceClipRect: Qt.rect(0, 0, 46, 72)
+        sourceSize.height: 70 
+        sourceClipRect: Qt.rect(0, 0, 46, 70)
     }
 
     Image {
@@ -24,8 +24,8 @@ Rectangle {
         source: button.filename
 
         sourceSize.width: 92
-        sourceSize.height: 72 
-        sourceClipRect: Qt.rect(46, 0, 46, 72)
+        sourceSize.height: 70 
+        sourceClipRect: Qt.rect(46, 0, 46, 70)
     }
 
     MouseArea {

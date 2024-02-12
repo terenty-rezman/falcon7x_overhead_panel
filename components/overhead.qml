@@ -5,7 +5,9 @@ Image {
     height: 1000
     source: "overhead.png"
 
-    FirePanel {
+    FirePanel {}
 
-    }
+    FlightControlPanel {}
+
+    EnginesApu {}
 }
