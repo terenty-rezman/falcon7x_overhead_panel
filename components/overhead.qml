@@ -10,4 +10,6 @@ Image {
     FlightControlPanel {}
 
     EnginesApu {}
+
+    Hydraulics {}
 }

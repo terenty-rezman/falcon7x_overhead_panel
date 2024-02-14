@@ -33,6 +33,8 @@ send_buttons_idx = OrderedDict(
     fcs_steering=15,
     apu_master=16,
     apu_start_stop=17,
+    shutoff_a1=18,
+    shutoff_a2=19,
 )
 
 send_buttons_state = QByteArray() 
@@ -64,6 +66,8 @@ receive_panel_items = OrderedDict(
     fcs_steering=23,
     apu_master=24,
     apu_start_stop=25,
+    shutoff_a1=26,
+    shutoff_a2=27,
 )
 
 
