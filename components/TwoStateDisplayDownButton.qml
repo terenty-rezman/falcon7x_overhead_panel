@@ -28,6 +28,8 @@ Rectangle {
     }
 
     MouseArea {
+        cursorShape: Qt.PointingHandCursor
+
         width: 46
         height: 46
         x: 0

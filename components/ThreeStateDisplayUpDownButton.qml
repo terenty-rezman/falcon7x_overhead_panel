@@ -3,41 +3,46 @@ import QtQuick 2.15
 Rectangle {
     id: button
     width: 46
-    height: 46
+    height: 83
     property int state: 0
+    color:"transparent"
 
     property string filename
 
     Image {
-        id: off
+        id: state0
         source: button.filename
 
-        sourceSize.width: 138
-        sourceSize.height: 46
-        sourceClipRect: Qt.rect(0, 0, 46, 46)
+        sourceSize.width: 138 
+        sourceSize.height: 83 
+        sourceClipRect: Qt.rect(0, 0, 46, 83)
     }
 
     Image {
-        id: middle
+        id: state1
         source: button.filename
 
         sourceSize.width: 138
-        sourceSize.height: 46
-        sourceClipRect: Qt.rect(46, 0, 46, 46)
+        sourceSize.height: 83 
+        sourceClipRect: Qt.rect(46, 0, 46, 83)
     }
 
     Image {
-        id: on
+        id: state2
         source: button.filename
 
         sourceSize.width: 138
-        sourceSize.height: 46
-        sourceClipRect: Qt.rect(92, 0, 46, 46)
+        sourceSize.height: 83 
+        sourceClipRect: Qt.rect(92, 0, 46, 83)
     }
 
     MouseArea {
-        anchors.fill: parent
         cursorShape: Qt.PointingHandCursor
+
+        width: 46
+        height: 46
+        x: 0
+        y: 16 
 
         onPressed: {
             backend.on_button_press(button)
@@ -50,61 +55,62 @@ Rectangle {
 
     states: [
         State {
-            name: "off"
+            name: "state0"
             when: button.state === 0
 
             PropertyChanges {
-                target: off
+                target: state0 
                 opacity: 1
             }
 
             PropertyChanges {
-                target: middle
+                target: state1
                 opacity: 0
             }
 
             PropertyChanges {
-                target: on
+                target: state2
                 opacity: 0
             }
         },
 
         State {
-            name: "middle"
+            name: "state1"
             when: button.state === 1
 
             PropertyChanges {
-                target: off
+                target: state0 
                 opacity: 0
             }
 
             PropertyChanges {
-                target: middle
+                target: state1
                 opacity: 1
             }
 
             PropertyChanges {
-                target: on
+                target: state2
                 opacity: 0
             }
+
         },
 
         State {
-            name: "on"
+            name: "state2"
             when: button.state === 2
 
             PropertyChanges {
-                target: off
+                target: state0 
                 opacity: 0
             }
 
             PropertyChanges {
-                target: middle
+                target: state1
                 opacity: 0
             }
 
             PropertyChanges {
-                target: on
+                target: state2
                 opacity: 1
             }
         }

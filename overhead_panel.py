@@ -35,6 +35,10 @@ send_buttons_idx = OrderedDict(
     apu_start_stop=17,
     shutoff_a1=18,
     shutoff_a2=19,
+    backup_pump=20,
+    shutoff_b2=21,
+    shutoff_b3=22,
+    shutoff_c2=23,
 )
 
 send_buttons_state = QByteArray() 
@@ -68,6 +72,10 @@ receive_panel_items = OrderedDict(
     apu_start_stop=25,
     shutoff_a1=26,
     shutoff_a2=27,
+    backup_pump=28,
+    shutoff_b2=29,
+    shutoff_b3=30,
+    shutoff_c2=31,
 )
 
 
@@ -109,8 +117,6 @@ class Backend(QObject):
             state = int.from_bytes(data[i], "little")
             item = view.rootObject().findChild(QQuickItem, item_id)
             if item:
-                if item_id.startswith("disch"):
-                    if state == 1: state = 3 
                 item.setProperty("state", state)
 
 
