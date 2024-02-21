@@ -1,6 +1,6 @@
 import QtQuick 2.15
 
-Rectangle {
+Item {
     id: button
     width: 46
     height: 46

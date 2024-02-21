@@ -24,50 +24,24 @@ Item {
         mouse_enabled: false
     }
 
-    // engine 2
-    TwoStateDisplayUpButton {
-        id: firebutton_2
-        objectName: "firebutton_2"
+    ThreeStateButton {
+        id: disch_11
+        objectName: "disch_11"
 
-        x: 392
-        y: 42 
+        x: 138
+        y: 75
 
-        filename: "button_png/closed_display_up.png"
+        filename: "button_png/disch_1.png"
     }
 
-    // indicator
-    TwoStateButton {
-        id: fireindicator_2
-        objectName: "fireindicator_2"
+    ThreeStateButton {
+        id: disch_12
+        objectName: "disch_12"
 
-        x: 390
-        y: 75 
+        x: 201
+        y: 75
 
-        filename: "button_png/fire2.png"
-        mouse_enabled: false
-    }
-
-    // engine 3
-    TwoStateDisplayUpButton {
-        id: firebutton_3
-        objectName: "firebutton_3"
-
-        x: 745
-        y: 42 
-
-        filename: "button_png/closed_display_up.png"
-    }
-
-    // indicator
-    TwoStateButton {
-        id: fireindicator_3
-        objectName: "fireindicator_3"
-
-        x: 745
-        y: 75 
-
-        filename: "button_png/fire3.png"
-        mouse_enabled: false
+        filename: "button_png/disch_2.png"
     }
 
     // indicator
@@ -102,6 +76,49 @@ Item {
 
         filename: "button_png/closed_display_up.png"
         mouse_enabled: false
+    }
+
+    // engine 2
+    TwoStateDisplayUpButton {
+        id: firebutton_2
+        objectName: "firebutton_2"
+
+        x: 392
+        y: 42 
+
+        filename: "button_png/closed_display_up.png"
+    }
+
+    // indicator
+    TwoStateButton {
+        id: fireindicator_2
+        objectName: "fireindicator_2"
+
+        x: 390
+        y: 75 
+
+        filename: "button_png/fire2.png"
+        mouse_enabled: false
+    }
+
+    ThreeStateButton {
+        id: disch_21
+        objectName: "disch_21"
+
+        x: 455
+        y: 75
+
+        filename: "button_png/disch_1.png"
+    }
+
+    ThreeStateButton {
+        id: disch_22
+        objectName: "disch_22"
+
+        x: 518
+        y: 75
+
+        filename: "button_png/disch_2.png"
     }
 
     TwoStateButton {
@@ -146,44 +163,27 @@ Item {
         filename: "button_png/dish_display_up.png"
     }
 
-    ThreeStateButton {
-        id: disch_11
-        objectName: "disch_11"
+    // engine 3
+    TwoStateDisplayUpButton {
+        id: firebutton_3
+        objectName: "firebutton_3"
 
-        x: 138
-        y: 75
+        x: 745
+        y: 42 
 
-        filename: "button_png/disch_1.png"
+        filename: "button_png/closed_display_up.png"
     }
 
-    ThreeStateButton {
-        id: disch_12
-        objectName: "disch_12"
+    // indicator
+    TwoStateButton {
+        id: fireindicator_3
+        objectName: "fireindicator_3"
 
-        x: 201
-        y: 75
+        x: 745
+        y: 75 
 
-        filename: "button_png/disch_2.png"
-    }
-
-    ThreeStateButton {
-        id: disch_21
-        objectName: "disch_21"
-
-        x: 455
-        y: 75
-
-        filename: "button_png/disch_1.png"
-    }
-
-    ThreeStateButton {
-        id: disch_22
-        objectName: "disch_22"
-
-        x: 518
-        y: 75
-
-        filename: "button_png/disch_2.png"
+        filename: "button_png/fire3.png"
+        mouse_enabled: false
     }
 
     ThreeStateButton {

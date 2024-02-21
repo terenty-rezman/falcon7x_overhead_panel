@@ -1,11 +1,10 @@
 import QtQuick 2.15
 
-Rectangle {
+Item {
     id: button
     width: 46
     height: 72 
     property int state: 0
-    color:"transparent"
 
     property string filename
     property alias mouse_enabled: mouse_area.enabled

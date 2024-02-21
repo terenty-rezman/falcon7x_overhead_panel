@@ -39,6 +39,22 @@ send_buttons_idx = OrderedDict(
     shutoff_b2=21,
     shutoff_b3=22,
     shutoff_c2=23,
+    galley_master=24,
+    lh_master=25,
+    lh_init=26,
+    bus_tie=27,
+    rh_init=28,
+    rh_master=29,
+    cabin_master=30,
+    ext_power=31,
+    gen1=32,
+    lh_isol=33,
+    rat_reset=34,
+    rh_isol=35,
+    gen2=36,
+    gen3=37,
+    bat1=38,
+    bat2=39,
 )
 
 send_buttons_state = QByteArray() 
@@ -76,6 +92,22 @@ receive_panel_items = OrderedDict(
     shutoff_b2=29,
     shutoff_b3=30,
     shutoff_c2=31,
+    galley_master=32,
+    lh_master=33,
+    lh_init=34,
+    bus_tie=35,
+    rh_init=36,
+    rh_master=37,
+    cabin_master=38,
+    ext_power=39,
+    gen1=40,
+    lh_isol=41,
+    rat_reset=42,
+    rh_isol=43,
+    gen2=44,
+    gen3=45,
+    bat1=46,
+    bat2=47,
 )
 
 
@@ -146,6 +178,10 @@ view.setSource(url)
 backend = Backend()
 view.rootContext().setContextProperty("backend", backend)
 
+view.setWidth(1000)
+view.setHeight(1000)
 view.show()
+view.setMaximumWidth(1000)
+view.setMaximumHeight(1000)
 
 app.exec()

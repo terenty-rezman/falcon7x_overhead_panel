@@ -1,15 +1,30 @@
 import QtQuick 2.15
+import QtQuick
 
-Image {
-    width: 1000
-    height: 1000
-    source: "overhead.png"
+Rectangle {
+    anchors.fill: parent
+    color: "#000000"
 
-    FirePanel {}
+    Flickable {
+        anchors.fill: parent
+        contentWidth: panel.width
+        contentHeight: panel.height  
 
-    FlightControlPanel {}
+        Image {
+            id: panel
+            width: 1000
+            height: 1000
+            source: "button_png/overhead.png"
 
-    EnginesApu {}
+            FirePanel {}
 
-    Hydraulics {}
+            FlightControlPanel {}
+
+            EnginesApu {}
+
+            Hydraulics {}
+
+            DCSupply {}
+        }
+    }
 }

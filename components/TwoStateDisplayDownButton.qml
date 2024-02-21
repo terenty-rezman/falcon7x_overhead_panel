@@ -1,11 +1,10 @@
 import QtQuick 2.15
 
-Rectangle {
+Item {
     id: button
     width: 46
-    height: 72 
+    height: 70 
     property int state: 0
-    color:"transparent"
 
     property string filename
 
@@ -14,8 +13,8 @@ Rectangle {
         source: button.filename
 
         sourceSize.width: 92
-        sourceSize.height: 72 
-        sourceClipRect: Qt.rect(0, 0, 46, 72)
+        sourceSize.height: 70 
+        sourceClipRect: Qt.rect(0, 0, 46, 70)
     }
 
     Image {
@@ -23,8 +22,8 @@ Rectangle {
         source: button.filename
 
         sourceSize.width: 92
-        sourceSize.height: 72 
-        sourceClipRect: Qt.rect(46, 0, 46, 72)
+        sourceSize.height: 70 
+        sourceClipRect: Qt.rect(46, 0, 46, 70)
     }
 
     MouseArea {
