@@ -55,6 +55,7 @@ send_buttons_idx = OrderedDict(
     gen3=37,
     bat1=38,
     bat2=39,
+    aft_temp=40,
 )
 
 send_buttons_state = QByteArray() 
@@ -108,6 +109,7 @@ receive_panel_items = OrderedDict(
     gen3=45,
     bat1=46,
     bat2=47,
+    aft_temp=48,
 )
 
 
@@ -168,6 +170,13 @@ class Backend(QObject):
         send_buttons_state[idx] = b'\x00'
         self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
 
+    @Slot(QObject, result=None)
+    def on_rotation(self, button):
+        rotation = button.property("rotation_byte")
+        idx = send_buttons_idx[button.objectName()]
+        send_buttons_state[idx] = rotation.to_bytes(1, 'little')
+        self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
+
 
 app = QGuiApplication(sys.argv)
 url = QUrl("components/overhead.qml")
@@ -178,6 +187,7 @@ view.setSource(url)
 backend = Backend()
 view.rootContext().setContextProperty("backend", backend)
 
+view.setTitle("overhead panel - falcon7x")
 view.setWidth(1000)
 view.setHeight(1000)
 view.show()

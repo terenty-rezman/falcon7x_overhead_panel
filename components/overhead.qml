@@ -25,6 +25,8 @@ Rectangle {
             Hydraulics {}
 
             DCSupply {}
+
+            AirConditioning {}
         }
     }
 }
