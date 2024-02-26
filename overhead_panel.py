@@ -58,6 +58,9 @@ send_buttons_idx = OrderedDict(
     aft_temp=40,
     fwd_temp=41,
     fwd_temp_push=42,
+    crew_temp=43,
+    crew_temp_push=44,
+    crew_ratio=45,
 )
 
 send_buttons_state = QByteArray() 
@@ -114,17 +117,21 @@ receive_panel_items = OrderedDict(
     aft_temp=48,
     fwd_temp=49,
     fwd_temp_push=50,
+    crew_temp=51,
+    crew_temp_push=52,
 )
 
 special_map = {
     "aft_temp": "aft_temp_disp",
     "fwd_temp": "fwd_temp_disp",
+    "crew_temp": "crew_temp_disp",
 }
 
 from special_logic import *
 
 special_logic = {
-    "fwd_temp_push": fwd_temp_push_logic
+    "fwd_temp_push": fwd_temp_push_logic,
+    "crew_temp_push": crew_temp_push_logic,
 }
 
 
@@ -169,7 +176,7 @@ class Backend(QObject):
             if item_id in special_logic:
                 logic = special_logic[item_id]
                 logic(view, item_id, state)
-                return
+                continue
 
             # special map cases
             if item_id in special_map:

@@ -8,3 +8,8 @@ def fwd_temp_push_logic(view: QQuickView, item_id: str, state: int):
 
     aft_temp.setProperty("visible", bool(state))
     fwd_temp.setProperty("visible", bool(state))
+
+
+def crew_temp_push_logic(view: QQuickView, item_id: str, state: int):
+    crew_temp_disp = view.rootObject().findChild(QQuickItem, "crew_temp_disp")
+    crew_temp_disp.setProperty("visible", bool(state))
