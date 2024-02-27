@@ -9,7 +9,7 @@ Item {
         x: 521
         y: 187
 
-        filename: "button_png/on_display_up.png"
+        filename: "button_png/on_display_up_green.png"
     }
 
     TwoStateDisplayUpButton {

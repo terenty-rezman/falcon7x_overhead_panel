@@ -61,6 +61,10 @@ send_buttons_idx = OrderedDict(
     crew_temp=43,
     crew_temp_push=44,
     crew_ratio=45,
+    gnd_vent=46,
+    pack=47,
+    bag_isol=48,
+    xbleed_ecs=49,
 )
 
 send_buttons_state = QByteArray() 
@@ -119,6 +123,10 @@ receive_panel_items = OrderedDict(
     fwd_temp_push=50,
     crew_temp=51,
     crew_temp_push=52,
+    crew_ration=53,
+    gnd_vent=54,
+    bag_isol=55,
+    xbleed_ecs=56,
 )
 
 special_map = {
@@ -207,7 +215,7 @@ class Backend(QObject):
 
     @Slot(QObject, result=None)
     def on_rotation(self, button):
-        rotation = button.property("rotation_byte")
+        rotation = button.property("state")
         idx = send_buttons_idx[button.objectName()]
         send_buttons_state[idx] = rotation.to_bytes(1, 'little')
         self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)

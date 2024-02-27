@@ -8,7 +8,7 @@ Item {
     property string filename
     property int rotation_deg: -135
     property real rotation_float: 0
-    property int rotation_byte: 0
+    property int state: 0 // rotatation byte
     property int min_angle: -135
     property int max_angle: 135
     property int step: 5
@@ -49,7 +49,7 @@ Item {
 
             switch_.rotation_deg = rotation;
             switch_.rotation_float = (rotation - switch_.min_angle) / (switch_.max_angle - switch_.min_angle);
-            switch_.rotation_byte = switch_.rotation_float * 255;
+            switch_.state = switch_.rotation_float * 255;
 
             backend.on_rotation(switch_)
         }

@@ -103,4 +103,43 @@ Item {
         filename: "button_png/rotate_switch.png"
     }
 
+    TwoStateDisplayDownButton {
+        id: gnd_vent
+        objectName: "gnd_vent"
+
+        x: 616
+        y: 403
+
+        filename: "button_png/off_display_down.png"
+    }
+
+    DiscreteSwitch {
+        id: pack
+        objectName: "pack"
+
+        x: 731
+        y: 383
+
+        filename: "button_png/rotate_switch.png"
+    }
+
+    TwoStateDisplayUpButton {
+        id: bag_isol
+        objectName: "bag_isol"
+
+        x: 885
+        y: 402
+
+        filename: "button_png/on_display_up.png"
+    }
+
+    ThreeStateDisplayUpDownButton {
+        id: xbleed_ecs
+        objectName: "xbleed_ecs"
+
+        x: 732
+        y: 457
+
+        filename: "button_png/on_off_display_updown.png"
+    }
 }
