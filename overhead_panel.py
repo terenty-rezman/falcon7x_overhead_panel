@@ -65,6 +65,19 @@ send_buttons_idx = OrderedDict(
     pack=47,
     bag_isol=48,
     xbleed_ecs=49,
+    boost1=50,
+    xtk_1=51,
+    xtk_2=52,
+    boost3=53,
+    xtk_3=54,
+    backup_13=55, 
+    xtk_4=56,
+    xtk_5=57,
+    boost2=58,
+    xtk_6=59,
+    xbp_12=60,
+    xbp_13=61,
+    xbp_23=62,
 )
 
 send_buttons_state = QByteArray() 
@@ -127,6 +140,19 @@ receive_panel_items = OrderedDict(
     gnd_vent=54,
     bag_isol=55,
     xbleed_ecs=56,
+    boost1=57,
+    xtk_1=58,
+    xtk_2=59,
+    boost3=60,
+    xtk_3=61,
+    backup_13=62,
+    xtk_4=63,
+    xtk_5=64,
+    boost2=65,
+    xtk_6=66,
+    xbp_12=67,
+    xbp_13=68,
+    xbp_23=69,
 )
 
 special_map = {

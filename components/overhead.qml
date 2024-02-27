@@ -27,6 +27,8 @@ Rectangle {
             DCSupply {}
 
             AirConditioning {}
+
+            Fuel {}
         }
     }
 }
