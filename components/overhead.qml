@@ -29,6 +29,8 @@ Rectangle {
             AirConditioning {}
 
             Fuel {}
+
+            AntiIce {}
         }
     }
 }

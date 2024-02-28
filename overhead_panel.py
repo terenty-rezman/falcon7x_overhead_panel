@@ -78,6 +78,11 @@ send_buttons_idx = OrderedDict(
     xbp_12=60,
     xbp_13=61,
     xbp_23=62,
+    wings=63,
+    ice_brake=64,
+    ice_eng1=65,
+    ice_eng2=66,
+    ice_eng3=67,
 )
 
 send_buttons_state = QByteArray() 
@@ -153,6 +158,11 @@ receive_panel_items = OrderedDict(
     xbp_12=67,
     xbp_13=68,
     xbp_23=69,
+    wings=70,
+    ice_brake=71,
+    ice_eng1=72,
+    ice_eng2=73,
+    ice_eng3=74,
 )
 
 special_map = {
