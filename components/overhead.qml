@@ -33,6 +33,8 @@ Rectangle {
             AntiIce {}
 
             Bleed {}
+
+            Pressurization {}
         }
     }
 }
