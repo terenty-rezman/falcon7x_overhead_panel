@@ -83,6 +83,12 @@ send_panel_items = [
     "ice_eng1",
     "ice_eng2",
     "ice_eng3",
+    "bleed1",
+    "bleed12",
+    "bleed2",
+    "bleed13",
+    "bleed_apu",
+    "bleed3"
 ]
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}
@@ -165,6 +171,12 @@ receive_panel_items = [
     "ice_eng1",
     "ice_eng2",
     "ice_eng3",
+    "bleed1",
+    "bleed12",
+    "bleed2",
+    "bleed13",
+    "bleed_apu",
+    "bleed3"
 ]
 
 special_map = {

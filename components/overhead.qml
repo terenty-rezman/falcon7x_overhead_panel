@@ -31,6 +31,8 @@ Rectangle {
             Fuel {}
 
             AntiIce {}
+
+            Bleed {}
         }
     }
 }
