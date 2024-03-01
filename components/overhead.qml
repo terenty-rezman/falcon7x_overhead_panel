@@ -39,6 +39,8 @@ Rectangle {
             PitotHeat {}
 
             WindshieldHeat {}
+            
+            PaxOxygen {}
         }
     }
 }

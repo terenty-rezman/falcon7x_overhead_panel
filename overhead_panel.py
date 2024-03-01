@@ -99,6 +99,7 @@ send_panel_items = [
     "windshield_lh",
     "windshield_rh",
     "windshield_backup",
+    "pax_oxygen",
 ]
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}
