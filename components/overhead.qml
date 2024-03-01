@@ -35,6 +35,8 @@ Rectangle {
             Bleed {}
 
             Pressurization {}
+
+            PitotHeat {}
         }
     }
 }
