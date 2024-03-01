@@ -91,6 +91,8 @@ send_panel_items = [
     "bleed3",
     "dump",
     "bag_vent",
+    "cabin_alt",
+    "pressu_man",
 ]
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}
@@ -151,7 +153,7 @@ receive_panel_items = [
     "fwd_temp_push",
     "crew_temp",
     "crew_temp_push",
-    "crew_ration",
+    "crew_ratio",
     "gnd_vent",
     "bag_isol",
     "xbleed_ecs",
@@ -181,6 +183,7 @@ receive_panel_items = [
     "bleed3",
     "dump",
     "bag_vent",
+    "pressu_man",
 ]
 
 special_map = {
