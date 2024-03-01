@@ -37,6 +37,8 @@ Rectangle {
             Pressurization {}
 
             PitotHeat {}
+
+            WindshieldHeat {}
         }
     }
 }
