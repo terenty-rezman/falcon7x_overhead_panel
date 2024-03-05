@@ -4,7 +4,7 @@ from collections import OrderedDict
 
 from PySide6.QtQuick import QQuickView, QQuickItem
 from PySide6.QtGui import QGuiApplication
-from PySide6.QtCore import QUrl, QObject, Slot, Property, SLOT, SIGNAL, QByteArray
+from PySide6.QtCore import QUrl, QObject, Slot, Property, SLOT, SIGNAL, QByteArray, QTimer
 from PySide6.QtNetwork import QUdpSocket, QHostAddress
 from PySide6.QtQml import QQmlContext
 
@@ -100,6 +100,11 @@ send_panel_items = [
     "windshield_rh",
     "windshield_backup",
     "pax_oxygen",
+    "rain_rplint_lh",
+    "el_nav",
+    "el_anticol",
+    "el_wing",
+    "el_landing_lh",
 ]
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}
@@ -197,12 +202,17 @@ receive_panel_items = [
     "windshield_lh",
     "windshield_rh",
     "windshield_backup",
+    "el_nav",
+    "el_anticol",
+    "el_wing",
+    "el_landing_lh",
 ]
 
-special_map = {
+special_receive_map = {
     "aft_temp": "aft_temp_disp",
     "fwd_temp": "fwd_temp_disp",
     "crew_temp": "crew_temp_disp",
+    "el_landing_lh": "el_landing_lh_ind",
 }
 
 from special_logic import *
@@ -232,6 +242,14 @@ class Backend(QObject):
             self, SLOT('read_incoming_state()')
         )
 
+        timer = QTimer(self)
+        timer.timeout.connect(self.send_buttons_state_udp)
+        # timer.start(300)
+
+    def send_buttons_state_udp(self):
+        print("send")
+        self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
+
     def ignore_incoming_data(self):
         # ignore incoming data
         # state data comes on different socket
@@ -257,8 +275,8 @@ class Backend(QObject):
                 continue
 
             # special map cases
-            if item_id in special_map:
-                item_id = special_map[item_id]
+            if item_id in special_receive_map:
+                item_id = special_receive_map[item_id]
 
             item = view.rootObject().findChild(QQuickItem, item_id)
 

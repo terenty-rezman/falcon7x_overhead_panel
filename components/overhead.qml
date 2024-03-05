@@ -41,6 +41,8 @@ Rectangle {
             WindshieldHeat {}
             
             PaxOxygen {}
+
+            ExteriorLights {}
         }
     }
 }

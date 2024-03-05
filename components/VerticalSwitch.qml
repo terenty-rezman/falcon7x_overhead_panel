@@ -7,6 +7,7 @@ Item {
     property int state: 0
 
     property string filename
+    property bool state_authority: true
 
     Image {
         id: state0
@@ -43,12 +44,23 @@ Item {
         x: 0
         y: 16
 
+        function next_state(state) {
+            state++;
+            if (state == 3) {
+                state = 0;
+            }
+            return state;
+        } 
+
         onPressed: {
-            backend.on_button_press(button)
+            if (button.state_authority == true) {
+                button.state = next_state(button.state);
+            }
+            backend.on_rotation(button)
         }
 
         onReleased: {
-            backend.on_button_release(button)
+
         }
     }
 
