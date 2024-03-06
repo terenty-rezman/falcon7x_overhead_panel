@@ -59,8 +59,40 @@ Item {
         x: 287
         y: 882
 
-        filename: "button_png/on_display_up.png"
+        filename: "button_png/ldg_display_up.png"
 
         mouse_enabled: false
+    }
+
+    VerticalSwitch {
+        id: el_landing_rh
+        objectName: "el_landing_rh"
+
+        x: 354
+        y: 895
+
+        filename: "button_png/switch_up_middle_down.png"
+    }
+
+    TwoStateDisplayUpButton {
+        id: el_landing_rh_ind
+        objectName: "el_landing_rh_ind"
+
+        x: 345
+        y: 882
+
+        filename: "button_png/ldg_display_up.png"
+
+        mouse_enabled: false
+    }
+
+    TwoStateDisplayUpButton {
+        id: el_taxi
+        objectName: "el_taxi"
+
+        x: 410
+        y: 883
+
+        filename: "button_png/on_display_up.png"
     }
 }

@@ -105,6 +105,8 @@ send_panel_items = [
     "el_anticol",
     "el_wing",
     "el_landing_lh",
+    "el_landing_rh",
+    "el_taxi",
 ]
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}
@@ -206,6 +208,8 @@ receive_panel_items = [
     "el_anticol",
     "el_wing",
     "el_landing_lh",
+    "el_landing_rh",
+    "el_taxi",
 ]
 
 special_receive_map = {
@@ -213,6 +217,7 @@ special_receive_map = {
     "fwd_temp": "fwd_temp_disp",
     "crew_temp": "crew_temp_disp",
     "el_landing_lh": "el_landing_lh_ind",
+    "el_landing_rh": "el_landing_rh_ind",
 }
 
 from special_logic import *
