@@ -107,6 +107,10 @@ send_panel_items = [
     "el_landing_lh",
     "el_landing_rh",
     "el_taxi",
+    "cl_overhead",
+    "cl_panel",
+    "cl_dim",
+    "cl_shield",
 ]
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}

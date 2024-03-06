@@ -43,6 +43,8 @@ Rectangle {
             PaxOxygen {}
 
             ExteriorLights {}
+
+            CockpitLights {}
         }
     }
 }
