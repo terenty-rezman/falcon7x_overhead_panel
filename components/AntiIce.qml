@@ -3,7 +3,6 @@ import QtQuick 2.15
 
 Item { 
     ThreeStateDisplayUpDownButton {
-        id: wings
         objectName: "wings"
 
         x: 489
@@ -13,7 +12,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: ice_brake
         objectName: "ice_brake"
 
         x: 546
@@ -23,7 +21,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: ice_eng1
         objectName: "ice_eng1"
 
         x: 434
@@ -33,7 +30,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: ice_eng2
         objectName: "ice_eng2"
 
         x: 489
@@ -43,7 +39,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: ice_eng3
         objectName: "ice_eng3"
 
         x: 546

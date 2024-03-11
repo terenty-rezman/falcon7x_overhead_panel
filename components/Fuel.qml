@@ -2,7 +2,6 @@ import QtQuick 2.15
 
 Item { 
     ThreeStateDisplayUpDownButton {
-        id: boost1
         objectName: "boost1"
 
         x: 69
@@ -12,7 +11,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: xtk_1
         objectName: "xtk_1"
 
         x: 164
@@ -22,7 +20,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: xtk_2
         objectName: "xtk_2"
 
         x: 274
@@ -32,7 +29,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: boost3
         objectName: "boost3"
 
         x: 370
@@ -42,7 +38,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: xtk_3
         objectName: "xtk_3"
 
         x: 164
@@ -52,7 +47,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: backup_13
         objectName: "backup_13"
 
         x: 219
@@ -62,7 +56,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: xtk_4
         objectName: "xtk_4"
 
         x: 274
@@ -72,7 +65,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: xtk_5
         objectName: "xtk_5"
 
         x: 164
@@ -82,7 +74,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: boost2
         objectName: "boost2"
 
         x: 218
@@ -92,7 +83,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: xtk_6
         objectName: "xtk_6"
 
         x: 274
@@ -102,7 +92,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: xbp_12
         objectName: "xbp_12"
 
         x: 108
@@ -112,7 +101,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: xbp_13
         objectName: "xbp_13"
 
         x: 218
@@ -122,7 +110,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: xbp_23
         objectName: "xbp_23"
 
         x: 332

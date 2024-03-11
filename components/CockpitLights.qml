@@ -2,7 +2,6 @@ import QtQuick 2.15
 
 Item { 
     RotateSwitch {
-        id: cl_overhead
         objectName: "cl_overhead"
         
         x: 465

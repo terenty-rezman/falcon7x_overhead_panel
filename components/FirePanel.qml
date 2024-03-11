@@ -3,7 +3,6 @@ import QtQuick 2.15
 Item {
     // engine 1 
     TwoStateDisplayUpButton {
-        id: firebutton_1
         objectName: "firebutton_1"
 
         x: 75
@@ -14,7 +13,6 @@ Item {
 
     // indicator
     TwoStateButton {
-        id: fireindicator_1
         objectName: "fireindicator_1"
 
         x: 75
@@ -25,7 +23,6 @@ Item {
     }
 
     ThreeStateButton {
-        id: disch_11
         objectName: "disch_11"
 
         x: 138
@@ -35,7 +32,6 @@ Item {
     }
 
     ThreeStateButton {
-        id: disch_12
         objectName: "disch_12"
 
         x: 201
@@ -46,7 +42,6 @@ Item {
 
     // indicator
     TwoStateButton {
-        id: fire_apu_indicator 
         objectName: "fire_apu_indicator"
 
         x: 280
@@ -57,7 +52,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: apu_disch
         objectName: "apu_disch"
 
         x: 280 
@@ -68,7 +62,6 @@ Item {
 
     // indicator
     TwoStateDisplayUpButton {
-        id: fire_apu_closed_indicator
         objectName: "fire_apu_closed_indicator"
 
         x: 280
@@ -80,7 +73,6 @@ Item {
 
     // engine 2
     TwoStateDisplayUpButton {
-        id: firebutton_2
         objectName: "firebutton_2"
 
         x: 392
@@ -91,7 +83,6 @@ Item {
 
     // indicator
     TwoStateButton {
-        id: fireindicator_2
         objectName: "fireindicator_2"
 
         x: 390
@@ -102,7 +93,6 @@ Item {
     }
 
     ThreeStateButton {
-        id: disch_21
         objectName: "disch_21"
 
         x: 455
@@ -112,7 +102,6 @@ Item {
     }
 
     ThreeStateButton {
-        id: disch_22
         objectName: "disch_22"
 
         x: 518
@@ -122,7 +111,6 @@ Item {
     }
 
     TwoStateButton {
-        id: firerearcomp_indicator
         objectName: "firerearcomp_indicator"
 
         x: 601
@@ -133,7 +121,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: firerearcomp_button
         objectName: "firerearcomp_button"
 
         x: 601
@@ -143,7 +130,6 @@ Item {
     }
 
     TwoStateButton {
-        id: firebagcomp_indicator
         objectName: "firebagcomp_indicator"
 
         x: 663
@@ -154,7 +140,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: firebagcomp_button
         objectName: "firebagcomp_button"
 
         x: 663
@@ -165,7 +150,6 @@ Item {
 
     // engine 3
     TwoStateDisplayUpButton {
-        id: firebutton_3
         objectName: "firebutton_3"
 
         x: 745
@@ -176,7 +160,6 @@ Item {
 
     // indicator
     TwoStateButton {
-        id: fireindicator_3
         objectName: "fireindicator_3"
 
         x: 745
@@ -187,7 +170,6 @@ Item {
     }
 
     ThreeStateButton {
-        id: disch_31
         objectName: "disch_31"
 
         x: 810
@@ -197,7 +179,6 @@ Item {
     }
 
     ThreeStateButton {
-        id: disch_32
         objectName: "disch_32"
 
         x: 874

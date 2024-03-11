@@ -2,7 +2,6 @@ import QtQuick 2.15
 
 Item { 
     TwoStateDisplayUpButton {
-        id: dump
         objectName: "dump"
 
         x: 618
@@ -12,7 +11,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: bag_vent
         objectName: "bag_vent"
 
         x: 671
@@ -22,7 +20,6 @@ Item {
     }
 
     PressurizationSwitch {
-        id: cabin_alt
         objectName: "cabin_alt"
 
         rotation_deg: -90
@@ -34,7 +31,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: pressu_man
         objectName: "pressu_man"
 
         x: 888

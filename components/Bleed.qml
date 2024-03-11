@@ -3,7 +3,6 @@ import QtQuick 2.15
 
 Item { 
     ThreeStateDisplayUpDownButton {
-        id: bleed1
         objectName: "bleed1"
 
         x: 616
@@ -13,7 +12,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: bleed12
         objectName: "bleed12"
 
         x: 679
@@ -23,7 +21,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: bleed2
         objectName: "bleed2"
 
         x: 731
@@ -33,7 +30,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: bleed13
         objectName: "bleed13"
 
         x: 784
@@ -43,7 +39,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: bleed_apu
         objectName: "bleed_apu"
 
         x: 837
@@ -53,7 +48,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: bleed3
         objectName: "bleed3"
 
         x: 886

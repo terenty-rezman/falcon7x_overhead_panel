@@ -2,7 +2,6 @@ import QtQuick 2.15
 
 Item { 
     RotateSwitch {
-        id: aft_temp
         objectName: "aft_temp"
         
         x: 621
@@ -12,7 +11,6 @@ Item {
     }
 
     RotateSwitch {
-        id: fwd_temp
         objectName: "fwd_temp"
         
         x: 691
@@ -22,7 +20,6 @@ Item {
     }
 
     DigitsDisplay {
-        id: aft_temp_disp
         objectName: "aft_temp_disp"
 
         x: 622
@@ -36,7 +33,6 @@ Item {
     }
 
     TwoStateButton {
-        id: fwd_temp_push
         objectName: "fwd_temp_push"
 
         x: 691
@@ -46,7 +42,6 @@ Item {
     }
 
     DigitsDisplay {
-        id: fwd_temp_disp
         objectName: "fwd_temp_disp"
 
         x: 692
@@ -60,7 +55,6 @@ Item {
     }
 
     RotateSwitch {
-        id: crew_temp
         objectName: "crew_temp"
 
         x: 810
@@ -70,7 +64,6 @@ Item {
     }
 
     DigitsDisplay {
-        id: crew_temp_disp
         objectName: "crew_temp_disp"
 
         x: 811
@@ -84,7 +77,6 @@ Item {
     }
 
     TwoStateButton {
-        id: crew_temp_push
         objectName: "crew_temp_push"
 
         x: 811
@@ -94,7 +86,6 @@ Item {
     }
 
     RotateSwitch {
-        id: crew_ratio
         objectName: "crew_ratio"
 
         x: 878
@@ -104,7 +95,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: gnd_vent
         objectName: "gnd_vent"
 
         x: 616
@@ -114,7 +104,6 @@ Item {
     }
 
     DiscreteSwitch {
-        id: pack
         objectName: "pack"
 
         x: 731
@@ -124,7 +113,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: bag_isol
         objectName: "bag_isol"
 
         x: 885
@@ -134,7 +122,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: xbleed_ecs
         objectName: "xbleed_ecs"
 
         x: 732

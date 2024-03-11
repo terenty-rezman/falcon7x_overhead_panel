@@ -2,7 +2,6 @@ import QtQuick 2.15
 
 Item { 
     TwoStateDisplayDownButton {
-        id: probe_12
         objectName: "probe_12"
 
         x: 434
@@ -12,7 +11,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: probe_3
         objectName: "probe_3"
 
         x: 491
@@ -22,7 +20,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: probe_4
         objectName: "probe_4"
 
         x: 547

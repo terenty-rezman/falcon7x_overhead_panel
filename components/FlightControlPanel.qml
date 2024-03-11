@@ -3,7 +3,6 @@ import QtQuick 2.15
 
 Item { 
     TwoStateDisplayDownButton {
-        id: airbrake_auto
         objectName: "airbrake_auto"
 
         x: 66 
@@ -14,7 +13,6 @@ Item {
 
 
     TwoStateDisplayUpButton {
-        id: fcs_engage_norm
         objectName: "fcs_engage_norm"
 
         x: 161 
@@ -24,7 +22,6 @@ Item {
     }
 
     TwoStateDisplayUpButton {
-        id: fcs_engage_stby
         objectName: "fcs_engage_stby"
 
         x: 228
@@ -34,7 +31,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: fcs_steering
         objectName: "fcs_steering"
 
         x: 295

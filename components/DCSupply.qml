@@ -3,7 +3,6 @@ import QtQuick 2.15
 
 Item { 
     ThreeStateDisplayUpDownButton {
-        id: galley_master
         objectName: "galley_master"
 
         x: 65
@@ -13,7 +12,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: lh_master
         objectName: "lh_master"
 
         x: 114
@@ -23,7 +21,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: lh_init
         objectName: "lh_init"
 
         x: 215
@@ -33,7 +30,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: bus_tie
         objectName: "bus_tie"
 
         x: 280
@@ -43,7 +39,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: rh_init
         objectName: "rh_init"
 
         x: 355
@@ -53,7 +48,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: rh_master
         objectName: "rh_master"
 
         x: 460
@@ -63,7 +57,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: cabin_master
         objectName: "cabin_master"
 
         x: 508
@@ -73,7 +66,6 @@ Item {
     }
 
     TwoStateButton {
-        id: ext_power
         objectName: "ext_power"
 
         x: 557
@@ -83,7 +75,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: gen1
         objectName: "gen1"
 
         x: 112
@@ -93,7 +84,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: lh_isol
         objectName: "lh_isol"
 
         x: 166
@@ -103,7 +93,6 @@ Item {
     }
 
     TwoStateButton {
-        id: rat_reset
         objectName: "rat_reset"
 
         x: 356
@@ -113,7 +102,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: rh_isol
         objectName: "rh_isol"
 
         x: 407
@@ -123,7 +111,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: gen2
         objectName: "gen2"
 
         x: 508
@@ -133,7 +120,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: gen3
         objectName: "gen3"
 
         x: 557
@@ -143,7 +129,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: bat1
         objectName: "bat1"
 
         x: 226
@@ -153,7 +138,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: bat2
         objectName: "bat2"
 
         x: 294

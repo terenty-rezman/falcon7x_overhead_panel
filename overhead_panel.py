@@ -31,6 +31,9 @@ send_panel_items = [
     "fcs_engage_norm",
     "fcs_engage_stby",
     "fcs_steering",
+    "eng_1",
+    "eng_2",
+    "eng_3",
     "apu_master",
     "apu_start_stop",
     "shutoff_a1",
@@ -240,7 +243,6 @@ special_logic = {
     "fwd_temp_push": fwd_temp_push_logic,
     "crew_temp_push": crew_temp_push_logic,
 }
-
 
 class Backend(QObject):
     @Property(int)

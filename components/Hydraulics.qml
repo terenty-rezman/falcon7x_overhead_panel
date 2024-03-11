@@ -3,7 +3,6 @@ import QtQuick 2.15
 
 Item { 
     TwoStateDisplayDownButton {
-        id: shutoff_a1
         objectName: "shutoff_a1"
 
         x: 635
@@ -13,7 +12,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: shutoff_a2
         objectName: "shutoff_a2"
 
         x: 685
@@ -23,7 +21,6 @@ Item {
     }
 
     ThreeStateDisplayUpDownButton {
-        id: backup_pump
         objectName: "backup_pump"
 
         x: 734
@@ -33,7 +30,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: shutoff_b2
         objectName: "shutoff_b2"
 
         x: 782
@@ -43,7 +39,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: shutoff_b3
         objectName: "shutoff_b3"
 
         x: 834
@@ -53,7 +48,6 @@ Item {
     }
 
     TwoStateDisplayDownButton {
-        id: shutoff_c2
         objectName: "shutoff_c2"
 
         x: 883
