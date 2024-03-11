@@ -6,8 +6,8 @@ Item {
         id: rain_rplint_lh
         objectName: "rain_rplint_lh"
 
-        x: 70
-        y: 909
+        x: 65
+        y: 904
 
         filename: "button_png/empty_two_state.png"
     }

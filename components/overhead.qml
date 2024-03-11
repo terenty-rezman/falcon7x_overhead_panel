@@ -45,6 +45,8 @@ Rectangle {
             ExteriorLights {}
 
             CockpitLights {}
+
+            InteriorLights {}
         }
     }
 }
