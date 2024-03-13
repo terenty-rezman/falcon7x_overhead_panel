@@ -1,5 +1,7 @@
 import QtQuick 2.15
 
+import "../basic_components"
+
 Item { 
     RotateSwitch {
         objectName: "aft_temp"
@@ -7,7 +9,7 @@ Item {
         x: 621
         y: 302
 
-        filename: "button_png/rotate_switch.png"
+        filename: "../button_png/rotate_switch.png"
     }
 
     RotateSwitch {
@@ -16,7 +18,7 @@ Item {
         x: 691
         y: 302
 
-        filename: "button_png/rotate_switch.png"
+        filename: "../button_png/rotate_switch.png"
     }
 
     DigitsDisplay {
@@ -38,7 +40,7 @@ Item {
         x: 691
         y: 302
 
-        filename: "button_png/empty_two_state.png"
+        filename: "../button_png/empty_two_state.png"
     }
 
     DigitsDisplay {
@@ -60,7 +62,7 @@ Item {
         x: 810
         y: 302
 
-        filename: "button_png/rotate_switch.png"
+        filename: "../button_png/rotate_switch.png"
     }
 
     DigitsDisplay {
@@ -82,7 +84,7 @@ Item {
         x: 811
         y: 302
 
-        filename: "button_png/empty_two_state.png"
+        filename: "../button_png/empty_two_state.png"
     }
 
     RotateSwitch {
@@ -91,7 +93,7 @@ Item {
         x: 878
         y: 302
 
-        filename: "button_png/rotate_switch.png"
+        filename: "../button_png/rotate_switch.png"
     }
 
     TwoStateDisplayDownButton {
@@ -100,7 +102,7 @@ Item {
         x: 616
         y: 403
 
-        filename: "button_png/off_display_down.png"
+        filename: "../button_png/off_display_down.png"
     }
 
     DiscreteSwitch {
@@ -109,7 +111,7 @@ Item {
         x: 731
         y: 383
 
-        filename: "button_png/rotate_switch.png"
+        filename: "../button_png/rotate_switch.png"
     }
 
     TwoStateDisplayUpButton {
@@ -118,7 +120,7 @@ Item {
         x: 885
         y: 402
 
-        filename: "button_png/on_display_up.png"
+        filename: "../button_png/on_display_up.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -127,6 +129,6 @@ Item {
         x: 732
         y: 457
 
-        filename: "button_png/on_off_display_updown.png"
+        filename: "../button_png/on_off_display_updown.png"
     }
 }

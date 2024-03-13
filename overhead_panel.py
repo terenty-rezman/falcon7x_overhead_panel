@@ -292,14 +292,14 @@ class Backend(QObject):
             # if special logic case
             if item_id in special_logic:
                 logic = special_logic[item_id]
-                logic(view, item_id, state)
+                logic(overhead_panel, item_id, state)
                 continue
 
             # special map cases
             if item_id in special_receive_map:
                 item_id = special_receive_map[item_id]
 
-            item = view.rootObject().findChild(QQuickItem, item_id)
+            item = overhead_panel.rootObject().findChild(QQuickItem, item_id)
 
             # default case
             if item:
@@ -333,17 +333,17 @@ class Backend(QObject):
 app = QGuiApplication(sys.argv)
 url = QUrl("components/overhead.qml")
 
-view = QQuickView()
-view.setSource(url)
+overhead_panel = QQuickView()
+overhead_panel.setSource(url)
 
 backend = Backend()
-view.rootContext().setContextProperty("backend", backend)
+overhead_panel.rootContext().setContextProperty("backend", backend)
 
-view.setTitle("overhead panel - falcon7x")
-view.setWidth(1000)
-view.setHeight(1000)
-view.show()
-view.setMaximumWidth(1000)
-view.setMaximumHeight(1000)
+overhead_panel.setTitle("overhead panel - falcon7x")
+overhead_panel.setWidth(1000)
+overhead_panel.setHeight(1000)
+overhead_panel.show()
+overhead_panel.setMaximumWidth(1000)
+overhead_panel.setMaximumHeight(1000)
 
 app.exec()

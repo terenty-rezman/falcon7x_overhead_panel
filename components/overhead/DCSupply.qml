@@ -1,5 +1,6 @@
-
 import QtQuick 2.15
+
+import "../basic_components"
 
 Item { 
     ThreeStateDisplayUpDownButton {
@@ -8,7 +9,7 @@ Item {
         x: 65
         y: 299
 
-        filename: "button_png/on_off_display_updown.png"
+        filename: "../button_png/on_off_display_updown.png"
     }
 
     TwoStateDisplayDownButton {
@@ -17,7 +18,7 @@ Item {
         x: 114
         y: 312
 
-        filename: "button_png/off_display_down.png"
+        filename: "../button_png/off_display_down.png"
     }
 
     TwoStateDisplayDownButton {
@@ -26,7 +27,7 @@ Item {
         x: 215
         y: 312
 
-        filename: "button_png/off_display_down.png"
+        filename: "../button_png/off_display_down.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -35,7 +36,7 @@ Item {
         x: 280
         y: 312
 
-        filename: "button_png/tied_display_updown.png"
+        filename: "../button_png/tied_display_updown.png"
     }
 
     TwoStateDisplayDownButton {
@@ -44,7 +45,7 @@ Item {
         x: 355
         y: 312
 
-        filename: "button_png/off_display_down.png"
+        filename: "../button_png/off_display_down.png"
     }
 
     TwoStateDisplayDownButton {
@@ -53,7 +54,7 @@ Item {
         x: 460
         y: 312
 
-        filename: "button_png/off_display_down.png"
+        filename: "../button_png/off_display_down.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -62,7 +63,7 @@ Item {
         x: 508
         y: 298
 
-        filename: "button_png/on_off_display_updown.png"
+        filename: "../button_png/on_off_display_updown.png"
     }
 
     TwoStateButton {
@@ -71,7 +72,7 @@ Item {
         x: 557
         y: 320
 
-        filename: "button_png/ext_power.png"
+        filename: "../button_png/ext_power.png"
     }
 
     TwoStateDisplayDownButton {
@@ -80,7 +81,7 @@ Item {
         x: 112
         y: 402
 
-        filename: "button_png/off_display_down.png"
+        filename: "../button_png/off_display_down.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -89,7 +90,7 @@ Item {
         x: 166
         y: 385
 
-        filename: "button_png/isol_down.png"
+        filename: "../button_png/isol_down.png"
     }
 
     TwoStateButton {
@@ -98,7 +99,7 @@ Item {
         x: 356
         y: 411
 
-        filename: "button_png/empty_two_state.png"
+        filename: "../button_png/empty_two_state.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -107,7 +108,7 @@ Item {
         x: 407
         y: 385
 
-        filename: "button_png/isol_down.png"
+        filename: "../button_png/isol_down.png"
     }
 
     TwoStateDisplayDownButton {
@@ -116,7 +117,7 @@ Item {
         x: 508
         y: 402
 
-        filename: "button_png/off_display_down.png"
+        filename: "../button_png/off_display_down.png"
     }
 
     TwoStateDisplayDownButton {
@@ -125,7 +126,7 @@ Item {
         x: 557
         y: 402
 
-        filename: "button_png/off_display_down.png"
+        filename: "../button_png/off_display_down.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -134,7 +135,7 @@ Item {
         x: 226
         y: 411
 
-        filename: "button_png/switch_updown.png"
+        filename: "../button_png/switch_updown.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -143,6 +144,6 @@ Item {
         x: 294
         y: 411
 
-        filename: "button_png/switch_updown.png"
+        filename: "../button_png/switch_updown.png"
     }
 }

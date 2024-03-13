@@ -1,5 +1,6 @@
-
 import QtQuick 2.15
+
+import "../basic_components"
 
 Item { 
     ThreeStateDisplayUpDownButton {
@@ -8,7 +9,7 @@ Item {
         x: 616
         y: 510
 
-        filename: "button_png/hpoff_off_updown.png"
+        filename: "../button_png/hpoff_off_updown.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -17,7 +18,7 @@ Item {
         x: 679
         y: 510
 
-        filename: "button_png/off_on_updown.png"
+        filename: "../button_png/off_on_updown.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -26,7 +27,7 @@ Item {
         x: 731
         y: 565
 
-        filename: "button_png/hpoff_off_updown.png"
+        filename: "../button_png/hpoff_off_updown.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -35,7 +36,7 @@ Item {
         x: 784
         y: 510
 
-        filename: "button_png/off_on_updown.png"
+        filename: "../button_png/off_on_updown.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -44,7 +45,7 @@ Item {
         x: 837
         y: 565
 
-        filename: "button_png/on_off_display_updown.png"
+        filename: "../button_png/on_off_display_updown.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -53,6 +54,6 @@ Item {
         x: 886
         y: 510
 
-        filename: "button_png/on_off_display_updown.png"
+        filename: "../button_png/on_off_display_updown.png"
     }
 }

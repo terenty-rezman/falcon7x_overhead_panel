@@ -1,5 +1,6 @@
-
 import QtQuick 2.15
+
+import "../basic_components"
 
 Rectangle {
     id: disp

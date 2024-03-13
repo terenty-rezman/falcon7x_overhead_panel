@@ -1,5 +1,7 @@
 import QtQuick 2.15
 
+import "../basic_components"
+
 Item { 
     TwoStateDisplayDownButton {
         objectName: "probe_12"
@@ -7,7 +9,7 @@ Item {
         x: 434
         y: 784
 
-        filename: "button_png/off_display_down.png"
+        filename: "../button_png/off_display_down.png"
     }
 
     TwoStateDisplayDownButton {
@@ -16,7 +18,7 @@ Item {
         x: 491
         y: 784
 
-        filename: "button_png/off_display_down.png"
+        filename: "../button_png/off_display_down.png"
     }
 
     TwoStateDisplayDownButton {
@@ -25,6 +27,6 @@ Item {
         x: 547
         y: 784
 
-        filename: "button_png/off_display_down.png"
+        filename: "../button_png/off_display_down.png"
     }
 }

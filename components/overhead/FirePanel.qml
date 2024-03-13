@@ -1,5 +1,7 @@
 import QtQuick 2.15
 
+import "../basic_components"
+
 Item {
     // engine 1 
     TwoStateDisplayUpButton {
@@ -8,7 +10,7 @@ Item {
         x: 75
         y: 41
 
-        filename: "button_png/closed_display_up.png"
+        filename: "../button_png/closed_display_up.png"
     }
 
     // indicator
@@ -18,7 +20,7 @@ Item {
         x: 75
         y: 75 
 
-        filename: "button_png/fire1.png"
+        filename: "../button_png/fire1.png"
         mouse_enabled: false
     }
 
@@ -28,7 +30,7 @@ Item {
         x: 138
         y: 75
 
-        filename: "button_png/disch_1.png"
+        filename: "../button_png/disch_1.png"
     }
 
     ThreeStateButton {
@@ -37,7 +39,7 @@ Item {
         x: 201
         y: 75
 
-        filename: "button_png/disch_2.png"
+        filename: "../button_png/disch_2.png"
     }
 
     // indicator
@@ -47,7 +49,7 @@ Item {
         x: 280
         y: 75
 
-        filename: "button_png/fire_apu.png"
+        filename: "../button_png/fire_apu.png"
         mouse_enabled: false
     }
 
@@ -57,7 +59,7 @@ Item {
         x: 280 
         y: 75 
 
-        filename: "button_png/apu_dish.png"
+        filename: "../button_png/apu_dish.png"
     }
 
     // indicator
@@ -67,7 +69,7 @@ Item {
         x: 280
         y: 41
 
-        filename: "button_png/closed_display_up.png"
+        filename: "../button_png/closed_display_up.png"
         mouse_enabled: false
     }
 
@@ -78,7 +80,7 @@ Item {
         x: 392
         y: 42 
 
-        filename: "button_png/closed_display_up.png"
+        filename: "../button_png/closed_display_up.png"
     }
 
     // indicator
@@ -88,7 +90,7 @@ Item {
         x: 390
         y: 75 
 
-        filename: "button_png/fire2.png"
+        filename: "../button_png/fire2.png"
         mouse_enabled: false
     }
 
@@ -98,7 +100,7 @@ Item {
         x: 455
         y: 75
 
-        filename: "button_png/disch_1.png"
+        filename: "../button_png/disch_1.png"
     }
 
     ThreeStateButton {
@@ -107,7 +109,7 @@ Item {
         x: 518
         y: 75
 
-        filename: "button_png/disch_2.png"
+        filename: "../button_png/disch_2.png"
     }
 
     TwoStateButton {
@@ -116,7 +118,7 @@ Item {
         x: 601
         y: 75
 
-        filename: "button_png/fire_rear_comp.png"
+        filename: "../button_png/fire_rear_comp.png"
         mouse_enabled: false
     }
 
@@ -126,7 +128,7 @@ Item {
         x: 601
         y: 42 
 
-        filename: "button_png/dish_display_up.png"
+        filename: "../button_png/dish_display_up.png"
     }
 
     TwoStateButton {
@@ -135,7 +137,7 @@ Item {
         x: 663
         y: 75
 
-        filename: "button_png/fire_bag_comp.png"
+        filename: "../button_png/fire_bag_comp.png"
         mouse_enabled: false
     }
 
@@ -145,7 +147,7 @@ Item {
         x: 663
         y: 42 
 
-        filename: "button_png/dish_display_up.png"
+        filename: "../button_png/dish_display_up.png"
     }
 
     // engine 3
@@ -155,7 +157,7 @@ Item {
         x: 745
         y: 42 
 
-        filename: "button_png/closed_display_up.png"
+        filename: "../button_png/closed_display_up.png"
     }
 
     // indicator
@@ -165,7 +167,7 @@ Item {
         x: 745
         y: 75 
 
-        filename: "button_png/fire3.png"
+        filename: "../button_png/fire3.png"
         mouse_enabled: false
     }
 
@@ -175,7 +177,7 @@ Item {
         x: 810
         y: 75
 
-        filename: "button_png/disch_1.png"
+        filename: "../button_png/disch_1.png"
     }
 
     ThreeStateButton {
@@ -184,6 +186,6 @@ Item {
         x: 874
         y: 75
 
-        filename: "button_png/disch_2.png"
+        filename: "../button_png/disch_2.png"
     }
 }

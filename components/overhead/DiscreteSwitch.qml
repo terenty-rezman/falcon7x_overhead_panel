@@ -1,6 +1,8 @@
 import QtQuick 2.15
 import QtQml
 
+import "../basic_components"
+
 Item {
     id: switch_
     width: 46

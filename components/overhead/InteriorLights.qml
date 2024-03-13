@@ -1,5 +1,6 @@
-
 import QtQuick 2.15
+
+import "../basic_components"
 
 Item { 
     VerticalSwitch {
@@ -8,7 +9,7 @@ Item {
         x: 669
         y: 893
 
-        filename: "button_png/switch_up_middle_down.png"
+        filename: "../button_png/switch_up_middle_down.png"
     }
 
     TwoStateDisplayUpButton {
@@ -17,7 +18,7 @@ Item {
         x: 669
         y: 882
 
-        filename: "button_png/emrge_display_up.png"
+        filename: "../button_png/emrge_display_up.png"
 
         mouse_enabled: false
     }
@@ -28,7 +29,7 @@ Item {
         x: 728
         y: 882
 
-        filename: "button_png/on_display_up.png"
+        filename: "../button_png/on_display_up.png"
     }
 
     TwoStateDisplayUpButton {
@@ -37,7 +38,7 @@ Item {
         x: 777
         y: 882
 
-        filename: "button_png/on_display_up.png"
+        filename: "../button_png/on_display_up.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -46,7 +47,7 @@ Item {
         x: 828
         y: 882
 
-        filename: "button_png/pax_off_updown.png"
+        filename: "../button_png/pax_off_updown.png"
     }
 
     TwoStateButton {
@@ -55,6 +56,6 @@ Item {
         x: 888
         y: 904
 
-        filename: "button_png/empty_two_state.png"
+        filename: "../button_png/empty_two_state.png"
     }
 }

@@ -1,5 +1,7 @@
 import QtQuick 2.15
 
+import "../basic_components"
+
 Item { 
     DiscreteSwitch {
         objectName: "pax_oxygen"
@@ -9,6 +11,6 @@ Item {
         x: 828
         y: 789
 
-        filename: "button_png/rotate_switch.png"
+        filename: "../button_png/rotate_switch.png"
     }
 }

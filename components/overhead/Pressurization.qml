@@ -1,5 +1,7 @@
 import QtQuick 2.15
 
+import "../basic_components"
+
 Item { 
     TwoStateDisplayUpButton {
         objectName: "dump"
@@ -7,7 +9,7 @@ Item {
         x: 618
         y: 661
 
-        filename: "button_png/on_display_up.png"
+        filename: "../button_png/on_display_up.png"
     }
 
     ThreeStateDisplayUpDownButton {
@@ -16,7 +18,7 @@ Item {
         x: 671
         y: 663
 
-        filename: "button_png/off_on_updown.png"
+        filename: "../button_png/off_on_updown.png"
     }
 
     PressurizationSwitch {
@@ -27,7 +29,7 @@ Item {
         x: 794
         y: 684
 
-        filename: "button_png/rotate_switch.png"
+        filename: "../button_png/rotate_switch.png"
     }
 
     TwoStateDisplayUpButton {
@@ -36,6 +38,6 @@ Item {
         x: 888
         y: 676
 
-        filename: "button_png/on_display_up.png"
+        filename: "../button_png/on_display_up.png"
     }
 }

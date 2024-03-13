@@ -1,5 +1,7 @@
 import QtQuick 2.15
 
+import "../basic_components"
+
 Item { 
     RotateSwitch {
         objectName: "cl_overhead"
@@ -7,7 +9,7 @@ Item {
         x: 465
         y: 930
 
-        filename: "button_png/rotate_switch.png"
+        filename: "../button_png/rotate_switch.png"
     }
 
     RotateSwitch {
@@ -16,7 +18,7 @@ Item {
         x: 518
         y: 884
 
-        filename: "button_png/rotate_switch.png"
+        filename: "../button_png/rotate_switch.png"
     }
 
     RotateSwitch {
@@ -29,7 +31,7 @@ Item {
         max_angle: 20
         rotation_deg: -20
 
-        filename: "button_png/rotate_switch.png"
+        filename: "../button_png/rotate_switch.png"
     }
 
     RotateSwitch {
@@ -38,6 +40,6 @@ Item {
         x: 613
         y: 884
 
-        filename: "button_png/rotate_switch.png"
+        filename: "../button_png/rotate_switch.png"
     }
 }
