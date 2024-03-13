@@ -331,19 +331,29 @@ class Backend(QObject):
 
 
 app = QGuiApplication(sys.argv)
-url = QUrl("components/overhead.qml")
 
+url = QUrl("components/overhead.qml")
 overhead_panel = QQuickView()
 overhead_panel.setSource(url)
-
-backend = Backend()
-overhead_panel.rootContext().setContextProperty("backend", backend)
-
 overhead_panel.setTitle("overhead panel - falcon7x")
 overhead_panel.setWidth(1000)
 overhead_panel.setHeight(1000)
 overhead_panel.show()
 overhead_panel.setMaximumWidth(1000)
 overhead_panel.setMaximumHeight(1000)
+
+url = QUrl("components/front_panel.qml")
+front_panel = QQuickView()
+front_panel.setSource(url)
+front_panel.setTitle("front panel - falcon7x")
+front_panel.setWidth(1000)
+front_panel.setHeight(1000)
+front_panel.show()
+front_panel.setMaximumWidth(1000)
+front_panel.setMaximumHeight(277)
+
+backend = Backend()
+overhead_panel.rootContext().setContextProperty("backend", backend)
+front_panel.rootContext().setContextProperty("backend", backend)
 
 app.exec()
