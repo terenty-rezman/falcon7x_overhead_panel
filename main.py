@@ -8,6 +8,8 @@ from PySide6.QtCore import QUrl, QObject, Slot, Property, SLOT, SIGNAL, QByteArr
 from PySide6.QtNetwork import QUdpSocket, QHostAddress
 from PySide6.QtQml import QQmlContext
 
+import view_helper
+
 FALCON7X_SEND_STATE_ADDRRESS = QHostAddress.LocalHost
 FALCON7X_SEND_STATE_PORT = 1998
 
@@ -299,7 +301,7 @@ class Backend(QObject):
             if item_id in special_receive_map:
                 item_id = special_receive_map[item_id]
 
-            item = overhead_panel.rootObject().findChild(QQuickItem, item_id)
+            item = view_helper.find_object(item_id)
 
             # default case
             if item:
@@ -351,6 +353,9 @@ front_panel.setHeight(1000)
 front_panel.show()
 front_panel.setMaximumWidth(1000)
 front_panel.setMaximumHeight(277)
+
+view_helper.all_views.append(overhead_panel)
+view_helper.all_views.append(front_panel)
 
 backend = Backend()
 overhead_panel.rootContext().setContextProperty("backend", backend)
