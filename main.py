@@ -121,6 +121,7 @@ send_panel_items = [
     "il_smoking",
     "il_cabin",
     "rain_rplint_rh",
+    "master_warning",
 ]
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}
@@ -228,6 +229,8 @@ receive_panel_items = [
     "il_fasten",
     "il_smoking",
     "il_cabin",
+    "pty_lh",
+    "master_warning",
 ]
 
 special_receive_map = {
@@ -236,7 +239,8 @@ special_receive_map = {
     "crew_temp": "crew_temp_disp",
     "el_landing_lh": "el_landing_lh_ind",
     "el_landing_rh": "el_landing_rh_ind",
-    "il_emerge_lights": "il_emerge_lights_ind"
+    "il_emerge_lights": "il_emerge_lights_ind",
+    "master_warning": "master_warning_ind",
 }
 
 from special_logic import *
@@ -340,7 +344,7 @@ overhead_panel.setSource(url)
 overhead_panel.setTitle("overhead panel - falcon7x")
 overhead_panel.setWidth(1000)
 overhead_panel.setHeight(1000)
-overhead_panel.show()
+# overhead_panel.show()
 overhead_panel.setMaximumWidth(1000)
 overhead_panel.setMaximumHeight(1000)
 
