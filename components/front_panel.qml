@@ -29,15 +29,6 @@ Rectangle {
             }
 
             TwoStateButton {
-                objectName: "master_warning_lh"
-
-                x: 172
-                y: 35
-
-                filename: "../button_png/empty_two_state.png"
-            }
-
-            TwoStateButton {
                 objectName: "master_warning_lh_ind"
 
                 x: 172
@@ -48,9 +39,9 @@ Rectangle {
             }
 
             TwoStateButton {
-                objectName: "master_caution_lh"
+                objectName: "master_warning_lh"
 
-                x: 231
+                x: 172
                 y: 35
 
                 filename: "../button_png/empty_two_state.png"
@@ -64,6 +55,15 @@ Rectangle {
 
                 filename: "../button_png/master_caution.png"
                 mouse_enabled: false
+            }
+
+            TwoStateButton {
+                objectName: "master_caution_lh"
+
+                x: 231
+                y: 35
+
+                filename: "../button_png/empty_two_state.png"
             }
 
             TwoStateButton {
@@ -82,6 +82,15 @@ Rectangle {
                 y: 35
 
                 filename: "../button_png/fms_msg.png"
+            }
+
+            TwoStateButton {
+                objectName: "event_lh"
+
+                x: 402
+                y: 35
+
+                filename: "../button_png/event.png"
             }
         }
     }

@@ -30,7 +30,7 @@ Item {
     MouseArea {
         id: mouse_area
         anchors.fill: parent
-        cursorShape: Qt.PointingHandCursor
+        cursorShape: button.mouse_enabled ? Qt.PointingHandCursor : Qt.ArrowCursor
 
         onPressed: {
             backend.on_button_press(button)
