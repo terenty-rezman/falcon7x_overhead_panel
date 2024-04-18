@@ -126,6 +126,16 @@ send_panel_items = [
     "sil_aural_alarm_lh",
     "fms_msg_lh",
     "event_lh",
+    "event_rh",
+    "fms_msg_rh",
+    "sil_aural_alarm_rh",
+    "master_caution_rh",
+    "master_warning_rh",
+    "swap_lh",
+    "vhf_control_lh",
+    "baro_rot_lh",
+    "baro_push_lh",
+    "fdtd_lh",
 ]
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}
@@ -238,6 +248,12 @@ receive_panel_items = [
     "master_caution_lh",
     "fms_msg_lh",
     "event_lh",
+    "event_rh",
+    "fms_msg_rh",
+    "master_caution_rh",
+    "master_warning_rh",
+    "pty_rh",
+    "fdtd_lh",
 ]
 
 special_receive_map = {
@@ -249,6 +265,8 @@ special_receive_map = {
     "il_emerge_lights": "il_emerge_lights_ind",
     "master_warning_lh": "master_warning_lh_ind",
     "master_caution_lh": "master_caution_lh_ind",
+    "master_warning_rh": "master_warning_rh_ind",
+    "master_caution_rh": "master_caution_rh_ind",
 }
 
 from special_logic import *
@@ -341,6 +359,12 @@ class Backend(QObject):
         rotation = button.property("state")
         idx = send_panel_items_idx[button.objectName()]
         send_buttons_state[idx] = rotation.to_bytes(1, 'little')
+        self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
+
+    @Slot(QObject, int, result=None)
+    def on_rotation_step(self, button, direction):
+        idx = send_panel_items_idx[button.objectName()]
+        send_buttons_state[idx] = direction.to_bytes(1, 'little')
         self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
 
 
