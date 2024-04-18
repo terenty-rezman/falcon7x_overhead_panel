@@ -15,6 +15,8 @@ FALCON7X_SEND_STATE_PORT = 1998
 
 FALCON7X_RECEIVE_STATE_PORT = 1999
 
+BUTTON_PACKET_SIZE = 'H'
+
 
 send_panel_items = [
     "firebutton_1",
@@ -140,8 +142,7 @@ send_panel_items = [
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}
 
-send_buttons_state = QByteArray() 
-send_buttons_state.resize(len(send_panel_items_idx), '\0')
+send_buttons_state = array.array(BUTTON_PACKET_SIZE, [0]*len(send_panel_items_idx))
 
 receive_panel_items = [
     "firebutton_1",
@@ -318,8 +319,10 @@ class Backend(QObject):
             datagram.resize(self.receive_socket.pendingDatagramSize())
             (data, sender, senderPort) = self.receive_socket.readDatagram(len(datagram))
 
+            data = array.array(BUTTON_PACKET_SIZE, bytes(data))
+
         for i, item_id in enumerate(receive_panel_items):
-            state = int.from_bytes(data[i], "little")
+            state = data[i]
 
             # if special logic case
             if item_id in special_logic:
@@ -345,27 +348,27 @@ class Backend(QObject):
     @Slot(QObject, result=None)
     def on_button_press(self, button):
         idx = send_panel_items_idx[button.objectName()]
-        send_buttons_state[idx] = b'\x01'
-        self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
+        send_buttons_state[idx] = 1
+        self.send_socket.writeDatagram(send_buttons_state.tobytes(), FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
 
     @Slot(QObject, result=None)
     def on_button_release(self, button):
         idx = send_panel_items_idx[button.objectName()]
-        send_buttons_state[idx] = b'\x00'
-        self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
+        send_buttons_state[idx] = 0
+        self.send_socket.writeDatagram(send_buttons_state.tobytes(), FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
 
     @Slot(QObject, result=None)
     def on_rotation(self, button):
         rotation = button.property("state")
         idx = send_panel_items_idx[button.objectName()]
-        send_buttons_state[idx] = rotation.to_bytes(1, 'little')
-        self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
+        send_buttons_state[idx] = rotation
+        self.send_socket.writeDatagram(send_buttons_state.tobytes(), FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
 
     @Slot(QObject, int, result=None)
     def on_rotation_step(self, button, direction):
         idx = send_panel_items_idx[button.objectName()]
-        send_buttons_state[idx] = direction.to_bytes(1, 'little')
-        self.send_socket.writeDatagram(send_buttons_state, FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
+        send_buttons_state[idx] = direction
+        self.send_socket.writeDatagram(send_buttons_state.tobytes(), FALCON7X_SEND_STATE_ADDRRESS, FALCON7X_SEND_STATE_PORT)
 
 
 app = QGuiApplication(sys.argv)
