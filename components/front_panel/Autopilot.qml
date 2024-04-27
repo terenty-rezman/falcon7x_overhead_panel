@@ -48,4 +48,53 @@ Item {
 
         filename: "../button_png/off_on_on.png"
     }
+
+    RotateStepper {
+        objectName: "fp_speed_kts_mach"
+
+        x: 224
+        y: 180
+
+        filename: "../button_png/rotate_stepper.png"
+    }
+
+    TwoStateButton {
+        objectName: "fp_speed_is_mach_push"
+
+        x: 224
+        y: 180
+
+        filename: "../button_png/empty_two_state.png"
+    }
+
+    DigitsDisplay {
+        objectName: "fp_speed_mach_ind"
+
+        x: 220
+        y: 139
+
+        prefix: ""
+        min_value: 0
+        max_value: 1
+
+        pack_max_value: 65535
+        is_int_value: false
+
+        visible: true
+    }
+
+    DigitsDisplay {
+        objectName: "fp_speed_kts_ind"
+
+        x: 220
+        y: 139
+
+        prefix: ""
+        min_value: 95
+        max_value: 370
+
+        pack_max_value: 65535
+
+        visible: false
+    }
 }

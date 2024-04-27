@@ -138,6 +138,8 @@ send_panel_items = [
     "baro_rot_lh",
     "baro_push_lh",
     "fdtd_lh",
+    "fp_speed_is_mach_push",
+    "fp_speed_kts_mach",
 ]
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}
@@ -255,6 +257,8 @@ receive_panel_items = [
     "master_warning_rh",
     "pty_rh",
     "fdtd_lh",
+    "fp_speed_is_mach_push",
+    "fp_speed_kts_mach",
 ]
 
 special_receive_map = {
@@ -275,6 +279,8 @@ from special_logic import *
 special_logic = {
     "fwd_temp_push": fwd_temp_push_logic,
     "crew_temp_push": crew_temp_push_logic,
+    "fp_speed_is_mach_push": fp_speed_is_mach_logic,
+    "fp_speed_kts_mach": fp_speed_kts_mach_logic,
 }
 
 class Backend(QObject):

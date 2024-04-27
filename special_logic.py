@@ -14,3 +14,21 @@ def fwd_temp_push_logic(view: QQuickView, item_id: str, state: int):
 def crew_temp_push_logic(view: QQuickView, item_id: str, state: int):
     crew_temp_disp = view_helper.find_object("crew_temp_disp")
     crew_temp_disp.setProperty("visible", bool(state))
+
+
+def fp_speed_is_mach_logic(view: QQuickView, item_id: str, state: int):
+    crew_temp_disp = view_helper.find_object("fp_speed_mach_ind")
+    crew_temp_disp.setProperty("visible", bool(state))
+
+    crew_temp_disp = view_helper.find_object("fp_speed_kts_ind")
+    crew_temp_disp.setProperty("visible", bool(not state))
+
+
+def fp_speed_kts_mach_logic(view: QQuickView, item_id: str, state: int):
+    mach_ind = view_helper.find_object("fp_speed_mach_ind")
+    mach_ind.setProperty("state", state)
+
+    kts_ind = view_helper.find_object("fp_speed_kts_ind")
+    kts_ind.setProperty("state", state)
+
+

@@ -1,7 +1,5 @@
 import QtQuick 2.15
 
-import "../basic_components"
-
 Rectangle {
     id: disp
 
@@ -16,10 +14,24 @@ Rectangle {
     property int min_value: 0 
     property int max_value: 100
 
+    property int pack_max_value: 65535
+
+    property bool is_int_value: true
+
     onStateChanged: {
-        let float_val = disp.state / 255;
+        let float_val = disp.state / disp.pack_max_value;
         let disp_val = (disp.max_value - disp.min_value) * float_val + disp.min_value;
-        disp_val = Math.ceil(disp_val);
+
+        if (disp.is_int_value == true){
+            disp_val = Math.ceil(disp_val);
+        }
+        else {
+            // show 2 digits after .00
+            disp_val *= 100;
+            disp_val = Math.ceil(disp_val);
+            disp_val /= 100;
+        }
+
         digits.text = disp_val;
     }
 
