@@ -97,4 +97,72 @@ Item {
 
         visible: false
     }
+
+    ThreeStateButton {
+        objectName: "fp_autothrottle"
+
+        x: 224
+        y: 221
+
+        filename: "../button_png/off_on_on.png"
+    }
+
+    ThreeStateButton {
+        objectName: "fp_approach"
+
+        x: 318
+        y: 123
+
+        filename: "../button_png/off_cyan_green.png"
+    }
+
+    ThreeStateButton {
+        objectName: "fp_lnav"
+
+        x: 319
+        y: 222
+
+        filename: "../button_png/off_cyan_green.png"
+    }
+
+    DigitsDisplay {
+        objectName: "fp_hdg_trk_ind"
+
+        x: 389
+        y: 139
+
+        prefix: ""
+        min_value: 0
+        max_value: 360
+
+        pack_max_value: 65535
+    }
+
+    RotateStepper {
+        objectName: "fp_hdg_trk"
+
+        x: 390
+        y: 178
+
+        filename: "../button_png/rotate_stepper.png"
+    }
+
+    TwoStateButton {
+        objectName: "fp_hdg_trk_push"
+
+        x: 390
+        y: 181
+
+        filename: "../button_png/empty_two_state.png"
+    }
+
+    ThreeStateButton {
+        objectName: "fp_hdg_trk_mode"
+
+        x: 390
+        y: 222
+
+        filename: "../button_png/off_on_on.png"
+    }
+
 }
