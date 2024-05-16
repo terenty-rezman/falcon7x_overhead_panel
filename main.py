@@ -139,13 +139,23 @@ send_panel_items = [
     "baro_push_lh",
     "fdtd_lh",
     "fp_speed_is_mach_push",
+    "fp_speed_mach_man_fms",
     "fp_speed_kts_mach",
     "fp_autothrottle",
     "fp_approach",
     "fp_lnav",
+    "fp_hdg_trk_switch",
     "fp_hdg_trk",
     "fp_hdg_trk_push",
     "fp_hdg_trk_mode",
+    "fp_pilot_side",
+    "fp_autopilot",
+    "fp_vs_path",
+    "fp_clb",
+    "fp_vs",
+    "fp_vnav",
+    "fp_asel",
+    "fp_asel_ft",
 ]
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}
@@ -270,6 +280,12 @@ receive_panel_items = [
     "fp_lnav",
     "fp_hdg_trk",
     "fp_hdg_trk_mode",
+    "fp_pilot_side",
+    "fp_autopilot",
+    "fp_clb",
+    "fp_vs",
+    "fp_vnav",
+    "fp_asel",
 ]
 
 special_receive_map = {
@@ -284,6 +300,7 @@ special_receive_map = {
     "master_warning_rh": "master_warning_rh_ind",
     "master_caution_rh": "master_caution_rh_ind",
     "fp_hdg_trk": "fp_hdg_trk_ind",
+    "fp_asel": "fp_asel_ind",
 }
 
 from special_logic import *

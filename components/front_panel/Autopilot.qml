@@ -49,11 +49,23 @@ Item {
         filename: "../button_png/off_on_on.png"
     }
 
+    DiscreteSwitch {
+        objectName: "fp_speed_mach_man_fms"
+
+        angles: [15, 345]
+        rotation_deg: 345
+
+        x: 224
+        y: 181
+
+        filename: "../button_png/rotate_switch.png"
+    }
+
     RotateStepper {
         objectName: "fp_speed_kts_mach"
 
         x: 224
-        y: 180
+        y: 186
 
         filename: "../button_png/rotate_stepper.png"
     }
@@ -62,7 +74,7 @@ Item {
         objectName: "fp_speed_is_mach_push"
 
         x: 224
-        y: 180
+        y: 186
 
         filename: "../button_png/empty_two_state.png"
     }
@@ -138,11 +150,23 @@ Item {
         pack_max_value: 65535
     }
 
+    DiscreteSwitch {
+        objectName: "fp_hdg_trk_switch"
+
+        angles: [15, 345]
+        rotation_deg: 345
+
+        x: 390
+        y: 178
+
+        filename: "../button_png/rotate_switch.png"
+    }
+
     RotateStepper {
         objectName: "fp_hdg_trk"
 
         x: 390
-        y: 178
+        y: 183
 
         filename: "../button_png/rotate_stepper.png"
     }
@@ -163,6 +187,94 @@ Item {
         y: 222
 
         filename: "../button_png/off_on_on.png"
+    }
+
+    ThreeStateButton {
+        objectName: "fp_pilot_side"
+
+        x: 478
+        y: 123
+
+        filename: "../button_png/left_right_off.png"
+    }
+
+    ThreeStateButton {
+        objectName: "fp_autopilot"
+
+        x: 478
+        y: 221
+
+        filename: "../button_png/off_on_on.png"
+    }
+
+    RotateStepper {
+        objectName: "fp_vs_path"
+
+        x: 550
+        y: 165
+
+        filename: "../button_png/rotate_stepper.png"
+    }
+
+    ThreeStateButton {
+        objectName: "fp_clb"
+
+        x: 629
+        y: 123
+
+        filename: "../button_png/off_on_on.png"
+    }
+
+    ThreeStateButton {
+        objectName: "fp_vs"
+
+        x: 629
+        y: 172
+
+        filename: "../button_png/off_on_on.png"
+    }
+
+    ThreeStateButton {
+        objectName: "fp_vnav"
+
+        x: 629
+        y: 221
+
+        filename: "../button_png/off_cyan_green.png"
+    }
+
+    DigitsDisplay {
+        objectName: "fp_asel_ind"
+
+        x: 704
+        y: 141
+
+        prefix: ""
+        min_value: 0
+        max_value: 51000
+
+        pack_max_value: 65535
+    }
+
+    DiscreteSwitch {
+        objectName: "fp_asel_ft"
+
+        angles: [15, 345]
+        rotation_deg: 345
+
+        x: 720
+        y: 181
+
+        filename: "../button_png/rotate_switch.png"
+    }
+
+    RotateStepper {
+        objectName: "fp_asel"
+
+        x: 720
+        y: 185
+
+        filename: "../button_png/rotate_stepper.png"
     }
 
 }
