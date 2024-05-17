@@ -35,6 +35,7 @@ Item {
 
         let angle = switch_.angles[state];
         switch_.rotation_deg = angle;
+        console.log(angle)
     }
 
     MouseArea {

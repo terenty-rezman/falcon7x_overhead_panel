@@ -156,6 +156,12 @@ send_panel_items = [
     "fp_vnav",
     "fp_asel",
     "fp_asel_ft",
+    "fp_alt",
+    "baro_rot_rh",
+    "baro_push_rh",
+    "fdtd_rh",
+    "swap_rh",
+    "vhf_control_rh",
 ]
 
 send_panel_items_idx = {name: i for i, name in enumerate(send_panel_items)}
@@ -286,6 +292,8 @@ receive_panel_items = [
     "fp_vs",
     "fp_vnav",
     "fp_asel",
+    "fp_alt",
+    "fdtd_rh",
 ]
 
 special_receive_map = {

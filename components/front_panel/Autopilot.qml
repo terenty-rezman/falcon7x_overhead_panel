@@ -52,7 +52,7 @@ Item {
     DiscreteSwitch {
         objectName: "fp_speed_mach_man_fms"
 
-        angles: [15, 345]
+        angles: [345, 15]
         rotation_deg: 345
 
         x: 224
@@ -153,7 +153,7 @@ Item {
     DiscreteSwitch {
         objectName: "fp_hdg_trk_switch"
 
-        angles: [15, 345]
+        angles: [345, 15]
         rotation_deg: 345
 
         x: 390
@@ -259,7 +259,7 @@ Item {
     DiscreteSwitch {
         objectName: "fp_asel_ft"
 
-        angles: [15, 345]
+        angles: [345, 15]
         rotation_deg: 345
 
         x: 720
@@ -277,4 +277,57 @@ Item {
         filename: "../button_png/rotate_stepper.png"
     }
 
+    ThreeStateButton {
+        objectName: "fp_alt"
+
+        x: 721
+        y: 222
+
+        filename: "../button_png/off_on_on.png"
+    }
+
+    RotateStepper {
+        objectName: "baro_rot_rh"
+
+        x: 816
+        y: 123
+
+        filename: "../button_png/rotate_stepper.png"
+    }
+
+    TwoStateButton {
+        objectName: "baro_push_rh"
+
+        x: 816
+        y: 123
+
+        filename: "../button_png/empty_two_state.png"
+    }
+
+    ThreeStateButton {
+        objectName: "fdtd_rh"
+
+        x: 814
+        y: 203
+
+        filename: "../button_png/off_on_on.png"
+    }
+
+    TwoStateButton {
+        objectName: "swap_rh"
+
+        x: 889
+        y: 135
+
+        filename: "../button_png/empty_two_state.png"
+    }
+
+    RotateStepper {
+        objectName: "vhf_control_rh"
+
+        x: 889
+        y: 199
+
+        filename: "../button_png/rotate_stepper.png"
+    }
 }
