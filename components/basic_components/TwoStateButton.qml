@@ -13,18 +13,18 @@ Item {
         id: off
         source: button.filename
 
-        sourceSize.width: 92
-        sourceSize.height: 46
-        sourceClipRect: Qt.rect(0, 0, 46, 46)
+        sourceSize.width: 2 * button.width 
+        sourceSize.height: button.height
+        sourceClipRect: Qt.rect(0, 0, button.width, button.height)
     }
 
     Image {
         id: on
         source: button.filename
 
-        sourceSize.width: 92
-        sourceSize.height: 46
-        sourceClipRect: Qt.rect(46, 0, 46, 46)
+        sourceSize.width: 2 * button.width
+        sourceSize.height: button.height
+        sourceClipRect: Qt.rect(button.width, 0, button.width, button.height)
     }
 
     MouseArea {

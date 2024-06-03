@@ -14,6 +14,8 @@ Item {
     property int step: 5
     property alias cursorShape: mouse.cursorShape
 
+    property int pack_max_value: 65535
+
     Image {
         id: img
         source: switch_.filename
@@ -49,7 +51,7 @@ Item {
 
             switch_.rotation_deg = rotation;
             switch_.rotation_float = (rotation - switch_.min_angle) / (switch_.max_angle - switch_.min_angle);
-            switch_.state = switch_.rotation_float * 255;
+            switch_.state = switch_.rotation_float * switch_.pack_max_value;
 
             backend.on_rotation(switch_)
         }
